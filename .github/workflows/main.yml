@@ -112,7 +112,7 @@ jobs:
          TELEGRAM_MESSAGE="<b>CI/CD Результат</b>
         
          <b>Статус:</b> ${{ steps.status.outputs.message }}
-         <b>Проєкт:</b> ${{ github.repository }}
+         <b>Проект:</b> ${{ github.repository }}
          <b>Гілка:</b> ${{ github.ref_name }}
          <b>Коміт:</b> <code>${{ github.sha }}</code>
         
