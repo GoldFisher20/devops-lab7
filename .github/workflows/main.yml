@@ -71,7 +71,7 @@ jobs:
    name: Розгортання
    runs-on: ubuntu-latest
    needs: [basic-checks, build]
-   if: github.ref == 'refs/heads/master'
+   if: github.ref == 'refs/heads/main'
 
    steps:
      - name: Симуляція розгортання
@@ -85,9 +85,9 @@ jobs:
          sleep 3
          echo "Розгортання завершено успішно!"
 
- # Етап 4: Нотифікації Telegram
+ # Етап 4: Повідомлення Telegram
  notify:
-   name: Нотифікації
+   name: Повідомлення
    runs-on: ubuntu-latest
    needs: [basic-checks, build, deploy]
    if: always()
